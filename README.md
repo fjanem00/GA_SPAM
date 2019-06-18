@@ -1,7 +1,7 @@
 # GA_SPAM
 Instructions:
 
-1) Donwload all files in the same directory
+1)Donwload all files in the same directory
 
 2)Run in your command line "python3 TC_Main.py"
 
