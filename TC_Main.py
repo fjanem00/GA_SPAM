@@ -33,7 +33,7 @@ from sklearn.metrics import precision_recall_fscore_support, accuracy_score, con
 from sklearn.model_selection import train_test_split
 
 #own modules
-import Feature_Selection as FS
+import Feature_Selector as FS
 import GA_FS as GA
 import Preprocessing as prepro
 
@@ -210,18 +210,9 @@ def predict_model(clf, X, y,cl,fs):
 
 # In[98]:
 
-
+print("SELECT THE NUMBER")
 print("Do you want to use preprocessing?\n1)Yes\n2)No")
 pre = input()   
-if pre is '1':
-    seconds_prepro = time.time()
-    #1. TO CHANGE THE DATASET, same name as in point 3. 
-    csv_prepro = "./SpamAssasin_Dataset_prepro.csv"
-    #2. TO CHANGE THE DATASET, name of the csv file with contain the name of emails and categories.
-    prepro.main_preprocessing("./SpamAssasin_Dataset.csv","stop_words_spam.txt",csv_prepro)
-    total_time_prepro = time.time() - seconds_prepro
-    save_inform("Total time required to preprocess: " + str(total_time_prepro)+ " seconds\n") 
-
 
 # # Feature Extraction
 
@@ -264,6 +255,18 @@ print("What does feature selection want to use?\n1)None\n2)Random\n3)Genetic Alg
 fs = str(input())
 print("What does classifier want to use?\n1)SVM\n2)NB\n3)RF\n4)LR")
 cl = str(input())
+
+
+if pre is '1':
+    seconds_prepro = time.time()
+    #1. TO CHANGE THE DATASET, same name as in point 3. 
+    csv_prepro = "./SpamAssasin_Dataset_prepro.csv"
+    #2. TO CHANGE THE DATASET, name of the csv file with contain the name of emails and categories.
+    prepro.main_preprocessing("./SpamAssasin_Dataset.csv",csv_prepro)
+    total_time_prepro = time.time() - seconds_prepro
+    save_inform("Total time required to preprocess: " + str(total_time_prepro)+ " seconds\n") 
+
+
 
 if fe is '1':
     vectorizer = tfidf_pipeline()

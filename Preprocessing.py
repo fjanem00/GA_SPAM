@@ -19,18 +19,11 @@ from nltk.stem import PorterStemmer
 # In[440]:
 
 
-def remove_stopwords(text,stop_words_list):
+def remove_stopwords(text):
     
     stop = list(stopwords.words('english'))
 
     text = text.lower()
-
-    spamwords = open('stop_words_spam.txt', "r")
-
-    for line in spamwords.readlines():
-        stop.append(line.replace('\n',''))
-
-    spamwords.close()
 
     for word in stop: 
         text = text.replace(word+' ',' ').replace('  ',' ')
@@ -130,7 +123,7 @@ def save_csv(file,cat,text, csv_file):
 # In[445]:
 
 
-def main_preprocessing(path, stop_words_list,csv_file):
+def main_preprocessing(path,csv_file):
     
     data_frame = pd.read_csv(path)
     text = ' '
@@ -157,7 +150,7 @@ def main_preprocessing(path, stop_words_list,csv_file):
         
         text = general_removing(text)
         text = stem_lem(text)
-        text = remove_stopwords(text,stop_words_list)              
+        text = remove_stopwords(text)              
         save_csv(file,cat,text,csv_file)
 
 

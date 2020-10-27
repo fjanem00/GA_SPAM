@@ -1,0 +1,54 @@
+Total time required to preprocess: 47.573357582092285 seconds
+######### Inform of ######### Inform of Total time required to preprocess: 0.09101390838623047 seconds
+TF-IDF without FS and NB #########
+Number of initial features: 1855
+Number of selected features: 1855
+CV accuracy scores: 1.0 
+Micro: 
+Precision: 1.0 Recall: 1.0 F1 Score: 1.0
+Macro: 
+Precision: 1.0 Recall: 1.0 F1 Score: 1.0
+Macro: 
+Precision: 1.0 Recall: 1.0 F1 Score: 1.0
+Support: [100 100]
+Confusion Matrix: 
+(100	0)
+(0	100)
+Percent of FP: 0.0
+Percent of FN: 0.0
+######### Inform of Total time required to preprocess: 0.09530377388000488 seconds
+TF-IDF without FS and SVM #########
+Number of initial features: 1855
+Number of selected features: 1855
+CV accuracy scores: 1.0 
+Micro: 
+Precision: 1.0 Recall: 1.0 F1 Score: 1.0
+Macro: 
+Precision: 1.0 Recall: 1.0 F1 Score: 1.0
+Macro: 
+Precision: 1.0 Recall: 1.0 F1 Score: 1.0
+Support: [100 100]
+Confusion Matrix: 
+(100	0)
+(0	100)
+Percent of FP: 0.0
+Percent of FN: 0.0
+Total time required: 3.584674119949341 seconds
+######### Inform of Total time required to preprocess: 0.12181425094604492 seconds
+TF-IDF without FS and NB #########
+Number of initial features: 1855
+Number of selected features: 1855
+CV accuracy scores: 1.0 
+Micro: 
+Precision: 1.0 Recall: 1.0 F1 Score: 1.0
+Macro: 
+Precision: 1.0 Recall: 1.0 F1 Score: 1.0
+Macro: 
+Precision: 1.0 Recall: 1.0 F1 Score: 1.0
+Support: [100 100]
+Confusion Matrix: 
+(100	0)
+(0	100)
+Percent of FP: 0.0
+Percent of FN: 0.0
+Total time required: 3.9313127994537354 seconds
